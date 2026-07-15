@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One PDF Converter | Premium</title>
+    <meta name="description" content="Secure, fast, and completely client-side PDF converter. Convert images and text to PDF with zero server uploads.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Load jsPDF from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="glass-card">
+            <header>
+                <h1>Convert to PDF</h1>
+                <p>Fast, secure, and 100% on your browser. No files are uploaded to any server.</p>
+                <div class="supported-formats">
+                    <span>Supported:</span>
+                    <span class="badge">JPG</span>
+                    <span class="badge">PNG</span>
+                    <span class="badge">TXT</span>
+                </div>
+            </header>
+
+            <main>
+                <div id="drop-zone" class="drop-zone">
+                    <div class="drop-content">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        <p class="drop-text">Drag & drop files here, or <span class="browse-link">browse</span></p>
+                    </div>
+                    <input type="file" id="file-input" multiple accept="image/png, image/jpeg, image/jpg, image/gif, text/plain">
+                </div>
+
+                <div id="file-preview-container" class="file-preview-container hidden">
+                    <h3>Selected Files</h3>
+                    <ul id="file-list" class="file-list"></ul>
+                </div>
+
+                <div class="actions">
+                    <button id="convert-btn" class="btn-primary" disabled>
+                        <span>Convert to PDF</span>
+                        <svg class="btn-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>
+                    </button>
+                    <button id="clear-btn" class="btn-secondary hidden">Clear</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
